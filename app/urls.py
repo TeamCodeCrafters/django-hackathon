@@ -10,10 +10,12 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from core.views import UserViewSet
+from projeto.views import EquipeViewSet
 
 router = DefaultRouter()
-
+router.register(r"equipes", EquipeViewSet, basename="computadores")
 router.register("users", UserViewSet, basename="users")
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),

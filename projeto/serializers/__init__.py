@@ -1,0 +1,1 @@
+from .equipe import EquipeSerializer
