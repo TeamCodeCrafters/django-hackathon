@@ -1,11 +1,19 @@
 from django.db import models
-from core.models import User
+from django import forms
+
+
 class Equipe(models.Model):
-        data = models.DateField(auto_now_add=True)
-        user = models.ForeignKey(
-        User,    
-        on_delete=models.CASCADE,
-        related_name="ordensservico",
-        default=None,
-        null=True,
-    )
+    nome = models.CharField(max_length=100)
+    integrante1 = models.CharField(max_length=100, blank=True)
+    integrante2 = models.CharField(max_length=100, blank=True)
+    integrante3 = models.CharField(max_length=100, blank=True)
+    integrante4 = models.CharField(max_length=100, blank=True)
+    integrante5 = models.CharField(max_length=100, blank=True)
+    integrante6 = models.CharField(max_length=100, blank=True)
+    data = models.DateTimeField(auto_now_add=True)
+    
+
+
+
+    def __str__(self):
+        return f"{self.nome}"

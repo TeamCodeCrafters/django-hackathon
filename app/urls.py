@@ -11,10 +11,12 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from core.views import UserViewSet
 from projeto.views import EquipeViewSet
+from projeto.views import EquipeAnaliseViewSet
 
 router = DefaultRouter()
 router.register(r"equipes", EquipeViewSet, basename="computadores")
 router.register("users", UserViewSet, basename="users")
+router.register(r'equipesanalise', EquipeAnaliseViewSet)
 
 
 urlpatterns = [

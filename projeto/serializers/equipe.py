@@ -5,9 +5,7 @@ from projeto.models import Equipe
 
 
 class EquipeSerializer(ModelSerializer):
-    user = StringRelatedField(many=True)
-
     class Meta:
         model = Equipe
-        fields = ("id", "data", "user")
+        fields = '__all__'
         depth = 1
