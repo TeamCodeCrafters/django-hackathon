@@ -4,7 +4,7 @@ version = ""
 description = ""
 authors = [{ name = "Marco André Mendes", email = "marcoandre@gmail.com" }]
 dependencies = [
-    "django>=4.1.4",
+    "django>=4.2.7",
     "djangorestframework>=3.14.0",
     "djangorestframework-simplejwt>=5.3.0",
     "django-cloudinary-storage>=0.3.0",
@@ -42,7 +42,7 @@ without-hashes = "true"
 pre_dev = "python ./scripts/set_my_ip.py"
 dev = "python manage.py runserver 0.0.0.0:19003"
 createsuperuser = "python manage.py createsuperuser"
-pre_migrate = "python manage.py makemigrations"
+makemigrations = "python manage.py makemigrations"
 migrate = "python manage.py migrate"
 post_migrate = "python manage.py graph_models -g -o core.png core"
 shell = "python manage.py shell"
