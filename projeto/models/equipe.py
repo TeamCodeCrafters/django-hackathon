@@ -1,7 +1,6 @@
 from django.db import models
 from django import forms
 
-
 class Equipe(models.Model):
     nome = models.CharField(max_length=100)
     integrante1 = models.CharField(max_length=100, blank=True)
@@ -10,10 +9,12 @@ class Equipe(models.Model):
     integrante4 = models.CharField(max_length=100, blank=True)
     integrante5 = models.CharField(max_length=100, blank=True)
     integrante6 = models.CharField(max_length=100, blank=True)
-    data = models.DateTimeField(auto_now_add=True)
+    data = models.DateField(auto_now_add=True)
+
+    @property
+    def ano_criacao(self):
+        return self.data.year
     
-
-
-
     def __str__(self):
-        return f"{self.nome}"
+        return f"{self.nome} - {self.ano_criacao}"
+

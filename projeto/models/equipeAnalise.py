@@ -12,7 +12,7 @@ class EquipeAnalise(models.Model):
     integrante4 = models.CharField(max_length=100, blank=True)
     integrante5 = models.CharField(max_length=100, blank=True)
     integrante6 = models.CharField(max_length=100, blank=True)
-    data = models.DateTimeField(auto_now_add=True)
+    data = models.DateField(auto_now_add=True)
     status = models.CharField(
         max_length=10,
         choices=[("pendente", "Pendente"), ("aceita", "Aceita"), ("rejeitada", "Recusada")],
@@ -31,3 +31,10 @@ class EquipeAnalise(models.Model):
             data=self.data,
         )
         return equipe
+
+    @property
+    def ano_criacao(self):
+        return self.data.year
+    
+    def __str__(self):
+        return f"{self.nome} - {self.ano_criacao}"
