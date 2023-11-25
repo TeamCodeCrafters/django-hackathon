@@ -7,6 +7,7 @@ class EquipeDetalheSerializer(ModelSerializer):
     class Meta:
         model = Equipe
         fields = "__all__"
+        depth = 1
 
 class AvaliacaoReadSerializer(ModelSerializer):
     Equipe = EquipeDetalheSerializer()
@@ -20,3 +21,4 @@ class AvaliacaoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Avaliacao
         fields = "__all__"
+        depth = 1
