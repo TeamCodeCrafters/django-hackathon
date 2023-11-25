@@ -1,5 +1,4 @@
 from django.db import models
-from django import forms
 
 class Equipe(models.Model):
     nome = models.CharField(max_length=100)

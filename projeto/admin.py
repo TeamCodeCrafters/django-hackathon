@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import Equipe, EquipeAnalise, Avaliacao
+from .models import Equipe, Avaliacao
 
 admin.site.register(Equipe)
-admin.site.register(EquipeAnalise)
+
 admin.site.register(Avaliacao)
