@@ -44,3 +44,24 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = "email"
+
+    @property
+    def is_avaliador(self):
+        for group in self.groups.all():
+            if group.name == "Avaliadores":
+                return True
+        return False
+    
+    @property
+    def is_professor(self):
+        for group in self.groups.all():
+            if group.name == "Professores":
+                return True
+        return False
+
+    @property
+    def is_aluno(self):
+        for group in self.groups.all():
+            if group.name == "Aluno":
+                return True
+        return False
