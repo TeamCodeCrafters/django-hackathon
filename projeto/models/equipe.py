@@ -8,7 +8,7 @@ class Equipe(models.Model):
     integrante4 = models.CharField(max_length=100, blank=True)
     integrante5 = models.CharField(max_length=100, blank=True)
     integrante6 = models.CharField(max_length=100, blank=True)
-    edicao = models.CharField(max_length=4,)
+    edicao = models.CharField(max_length=4, default=2023)
    
 
     @property
