@@ -12,5 +12,5 @@ class Equipe(models.Model):
 
     
     def __str__(self):
-        return f"{self.nome} - {self.ano_criacao}"
+        return f"{self.nome} - {self.edicao}"
 
