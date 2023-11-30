@@ -23,6 +23,7 @@ class UserAdmin(BaseUserAdmin):
                     "is_active",
                     "is_staff",
                     "is_superuser",
+                    "groups",
                 )
             },
         ),
@@ -39,6 +40,7 @@ class UserAdmin(BaseUserAdmin):
                     "password1",
                     "password2",
                     "name",
+                    "groups",
                     "is_active",
                     "is_staff",
                     "is_superuser",
