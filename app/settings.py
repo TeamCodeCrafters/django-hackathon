@@ -139,15 +139,15 @@ AUTH_USER_MODEL = "core.User"
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",),
-    # "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.DjangoModelPermissions",),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.DjangoModelPermissions",),
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "PAGE_SIZE": 1000,
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "<PROJETO> API",
-    "DESCRIPTION": "API para o projeto <descreva aqui seu projeto>.",
+    "TITLE": "HACKATHON API API",
+    "DESCRIPTION": "API para o projeto do Hackathon 2023.",
     "VERSION": "1.0.0",
 }
 
