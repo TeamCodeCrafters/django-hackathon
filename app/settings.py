@@ -4,6 +4,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from datetime import timedelta
+
 # Carrega as variáveis de ambiente do arquivo .env
 load_dotenv()
 
@@ -148,7 +149,7 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=100),
-    "REFRESH_TOKEN_LIFETIME":timedelta(days=1),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
 
 SPECTACULAR_SETTINGS = {

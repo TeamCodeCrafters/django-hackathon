@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 
+
 class Equipe(models.Model):
     nome = models.CharField(max_length=100)
     integrante1 = models.CharField(max_length=100, blank=True)
@@ -11,7 +12,5 @@ class Equipe(models.Model):
     integrante6 = models.CharField(max_length=100, blank=True)
     edicao = models.CharField(max_length=4, default=datetime.now().year)
 
-    
     def __str__(self):
         return f"{self.nome} - {self.edicao}"
-

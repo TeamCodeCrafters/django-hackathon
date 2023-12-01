@@ -4,7 +4,6 @@ from ..serializers import AvaliacaoSerializer
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 
-
 class AvaliacaoViewSet(ModelViewSet):
     queryset = Avaliacao.objects.all()
     serializer_class = AvaliacaoSerializer

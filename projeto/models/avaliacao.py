@@ -1,6 +1,7 @@
 from django.db import models
 from .equipe import Equipe
 
+
 class Avaliacao(models.Model):
     equipe = models.ForeignKey(Equipe, on_delete=models.RESTRICT, default=1)
     notaLayout = models.IntegerField()

@@ -11,5 +11,3 @@ class EquipeViewSet(ModelViewSet):
     queryset = Equipe.objects.all()
     serializer_class = EquipeSerializer
     permission_classes = [IsAuthenticated]
-
-

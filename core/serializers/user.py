@@ -7,7 +7,7 @@ from core.models import User
 class UserSerializer(ModelSerializer):
     class Meta:
         model = User
-        fields = ("id", "email", "name", "is_avaliador", "is_professor", "is_aluno", "groups")
+        fields = ("id", "email", "name", "is_avaliador", "is_professor", "is_aluno", "is_admin", "groups")
 
     def validate_password(self, value: str) -> str:
         """
