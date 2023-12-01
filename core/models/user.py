@@ -75,6 +75,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         if self.is_admin:
             return True
         for group in self.groups.all():
-            if group.name == "Aluno":
+            if group.name == "Alunos":
                 return True
         return False
