@@ -28,8 +28,3 @@ class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated]
-
-    def get_queryset(self):
-        users = User.objects.all()
-        users = users.exclude(groups__name="Administradores")
-        return users

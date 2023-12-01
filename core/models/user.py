@@ -46,14 +46,25 @@ class User(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = "email"
 
     @property
+    def is_admin(self):
+        for group in self.groups.all():
+            if group.name == "Administradores":
+                return True
+        return False
+
+    @property
     def is_avaliador(self):
+        if self.is_admin:
+            return True
         for group in self.groups.all():
             if group.name == "Avaliadores":
                 return True
         return False
-    
+
     @property
     def is_professor(self):
+        if self.is_admin:
+            return True
         for group in self.groups.all():
             if group.name == "Professores":
                 return True
@@ -61,6 +72,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     @property
     def is_aluno(self):
+        if self.is_admin:
+            return True
         for group in self.groups.all():
             if group.name == "Aluno":
                 return True
