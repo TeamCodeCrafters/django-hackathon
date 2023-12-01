@@ -7,7 +7,7 @@ from core.models import User
 class UserSerializer(ModelSerializer):
     class Meta:
         model = User
-        fields = "is_avaliador, is_aluno, is_professor, is_admin, email, name, password".split(
+        fields = "is_avaliador, is_aluno, is_professor, is_admin, email, name, password, groups".split(
             ", "
         )
 
